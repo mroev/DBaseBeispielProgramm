@@ -17,20 +17,20 @@ namespace ConMySqlTest
 
             Person[] personen = new Person[]
             {
-                new Person("Albrecht", "Alfons", "Rheine"),
-                new Person("Brinker", "Bernhard", "Rheine"),
-                new Person("Cencic", "Celine", "Neuenkirchen"),
-                new Person("Dürer", "Dennis", "Rheine"),
-                new Person("Elbhagen", "Erich", "Wettringen"),
-                new Person("Fischer", "Frida", "Elte"),
+                new Person("Albrecht", "Alfons", "Rheine", "5"),
+                new Person("Brinker", "Bernhard", "Rheine", "4"),
+                new Person("Cencic", "Celine", "Neuenkirchen", "6"),
+                new Person("Dürer", "Dennis", "Rheine", "8"),
+                new Person("Elbhagen", "Erich", "Wettringen", "9"),
+                new Person("Fischer", "Frida", "Elte", "1"),
             };
 
             // Daten einfügen
             Console.WriteLine("Neue Datensätze einfügen...");
             foreach (var person in personen)
             {
-                string columns = "Nachname, Vorname, Ort";
-                string values = $"'{person.Nachname}', '{person.Vorname}', '{person.Ort}'";
+                string columns = "Nachname, Vorname, Ort, Faktor";
+                string values = $"'{person.Nachname}', '{person.Vorname}', '{person.Ort}', '{person.Faktor}'";
                 db.InsertData("Personen", columns, values);
             }
 

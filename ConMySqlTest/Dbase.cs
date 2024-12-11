@@ -11,7 +11,6 @@ namespace ConMySqlTest
         public DBase(string connectionString)
         {
             _connectionString = connectionString;
-            InsertData("daten", "Nachname, Vorname, Ort", "'Albrecht', 'Alfons', 'Rheine'");
         }
 
         public void InsertData(string table, string columns, string values)
